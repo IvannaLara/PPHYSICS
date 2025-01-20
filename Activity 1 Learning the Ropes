@@ -1,0 +1,168 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "211b79dc-953e-45fe-bd0e-86e559e7dbf6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "He elegido un número entre 1 y 100. ¡Adivínalo!\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Introduce tu número:  5\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Demasiado bajo. Intenta de nuevo.\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Introduce tu número:  6\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Demasiado bajo. Intenta de nuevo.\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Introduce tu número:  80\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Demasiado alto. Intenta de nuevo.\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Introduce tu número:  50\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Demasiado bajo. Intenta de nuevo.\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random\n",
+    "\n",
+    "def adivinar_numero():\n",
+    "    # La computadora elige un número al azar entre 1 y 100\n",
+    "    numero_aleatorio = random.randint(1, 100\n",
+    "    # Mensaje para informar al usuario que la computadora ya eligio un número al azar.\n",
+    "    print(\"He elegido un número entre 1 y 100. ¡Adivínalo!\")\n",
+    "\n",
+    "    # Variable que lleva la cuenta de cuantas veces usuario intenta adivinar el número.\n",
+    "    intentos = 0\n",
+    "    while True:\n",
+    "        try:\n",
+    "            # El usuario ingresa un número\n",
+    "            adivinanza = int(input(\"Introduce tu número: \"))\n",
+    "            intentos += 1\n",
+    "\n",
+    "            # Verifica si el número que se ingreso por parte del usurario es menor que el que la computadora eligio.\n",
+    "            if adivinanza < numero_aleatorio:\n",
+    "            # Mensaje que vera el usuario si el numero que el ingreso es menor que el número que la computadora eligio.\n",
+    "                print(\"Demasiado bajo. Intenta de nuevo.\")\n",
+    "\n",
+    "            # Si la condicion anterior es falsa se ejecutara esta condición, para verificar si el numero que el usuario ingreso es más alto que el que la computadora eligio.\n",
+    "            elif adivinanza > numero_aleatorio:\n",
+    "            # Mensaje que vera el usuario si el numero que el ingreso es más alto que el número que la computadora eligio.\n",
+    "                print(\"Demasiado alto. Intenta de nuevo.\")\n",
+    "            # Se ejecuta si ni IF o el ELIF son verdaderos, así que se activa cuando el usuario adivina el número que la computadora eligio. \n",
+    "            else:\n",
+    "            # Mensaje que vera el usuario si el número que el ingreso es el número que la computadora eligio.\n",
+    "                print(f\"¡Felicidades! Adivinaste el número {numero_aleatorio} en {intentos} intentos.\")\n",
+    "\n",
+    "                # Termina el juago inmediatamente, ya que ya adivino en número.\n",
+    "                break\n",
+    "        # Caundo el usuario introduce un valor que no se puede convertir en un número que pueda reconocer la computadora, y lo marcara como falla.\n",
+    "        except ValueError:\n",
+    "        # Mensaje que se le arrojara al usuario al introducir un número invalido.\n",
+    "            print(\"Por favor, introduce un número válido.\")\n",
+    "\n",
+    "# Condición especial que determina si un codigo se esta ejecutando directamente o si está siendo importado como un módulo en otro archivo.\n",
+    "if __name__ == \"__main__\":\n",
+    "    # Esta función esta aqui para comenzar el juego.\n",
+    "    adivinar_numero()\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5738b9c3-1d78-4dfb-8de0-c2a7e89fae12",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8f9802d6-dc34-4b91-97cb-fd8263b5687b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8b76720d-d180-480b-8b3b-783604fed7cf",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
